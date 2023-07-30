@@ -1,0 +1,17 @@
+---
+import Title from './Title.astro'
+
+interface Props {
+  title: string
+  description: string
+}
+
+const { title, description } = Astro.props
+---
+
+<div class='py-8 px-4 m-auto max-w-5xl text-center lg:py-10 rounded'>
+  <Title title={title} />
+  <p class='mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400'>
+    {description}
+  </p>
+</div>

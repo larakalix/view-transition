@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Books from '../components/Albums.astro'
+import Jumbotron from '../components/Jumbotron.astro'
+---
+
+<Layout title='Welcome to the Library'>
+  <main class='bg-white dark:bg-gray-900 flex flex-col'>
+    <div class='py-20 bg-gray-100 mb-8'>
+      <Jumbotron
+        title='Trackbound: Where Music Come Alive'
+        description="We're a small team of music lovers who want to make it easier for you to find new music you'll love."
+      />
+    </div>
+
+    <Books />
+  </main>
+</Layout>

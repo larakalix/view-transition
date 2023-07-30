@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Jumbotron from '../components/Jumbotron.astro'
+import PageHeader from '../components/PageHeader.astro'
+---
+
+<Layout title='Error 404!'>
+  <PageHeader title='Page not found' />
+  <Jumbotron
+    title='Error!'
+    description='This page does not exist. Please check the URL and try again.'
+  />
+</Layout>

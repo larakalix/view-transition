@@ -1,0 +1,18 @@
+---
+interface Props {
+  idAlbum: string
+  strAlbum: string
+  strAlbumThumb: string
+}
+
+const { idAlbum, strAlbum, strAlbumThumb } = Astro.props
+---
+
+<a href={`/${idAlbum}`} class='flex flex-col items-center'>
+  <img
+    class='h-full w-full max-w-full object-cover rounded'
+    src={strAlbumThumb}
+    alt={strAlbum}
+    style={`view-transition-name: album-${idAlbum}`}
+  />
+</a>
