@@ -5,6 +5,13 @@ import Jumbotron from '../components/Jumbotron.astro'
 import { Tracks } from '../components/Tracks'
 import Title from '../components/Title.astro'
 
+export async function getStaticPaths() {
+  const staticPaths = await fetch(`https://music-api.charca.workers.dev/albums`)
+  const { results } = await staticPaths.json()
+
+  return results.map(({ idAlbum }) => ({ params: { id: idAlbum } }))
+}
+
 const { id } = Astro.params
 
 const response = await fetch(`https://music-api.charca.workers.dev/albums/${id}`)
